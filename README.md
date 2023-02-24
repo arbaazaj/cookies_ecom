@@ -1,6 +1,6 @@
-# cookies_ecom
+# Cookies Ecommerce Store App.
 
-> An Cookies Ecommerce Store design.
+> An Cookies Ecommerce Store design built in Flutter.
 
 ## Getting Started
 
