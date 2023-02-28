@@ -1,3 +1,5 @@
+import 'package:cookies_ecom/themes/colors.dart';
+import 'package:cookies_ecom/widgets/custom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,13 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: const Center(
-        child: Text('Hello World'),
-      ),
+    return const Scaffold(
+      backgroundColor: grey,
+      body: CustomAppBar(),
     );
   }
 }
