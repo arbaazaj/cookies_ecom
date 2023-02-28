@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
+        fontFamily: 'Outfit'
       ),
       home: const HomePage(title: 'Cookies App'),
     );
