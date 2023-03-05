@@ -3,17 +3,29 @@ import 'package:flutter/material.dart';
 
 class CustomCookieCardWidget extends StatelessWidget {
   const CustomCookieCardWidget(
-      {super.key, this.imageName, this.price, this.cookieName, this.isPremium});
+      {super.key,
+      this.imageName,
+      this.price,
+      this.cookieName,
+      this.isPremium,
+      this.paddingLeft = 32.0,
+      this.paddingRight = 32.0});
 
   final String? imageName;
   final String? cookieName;
   final bool? isPremium;
   final double? price;
 
+  /// Default [paddingLeft] is 32.0
+  final double? paddingLeft;
+
+  /// Default [paddingRight] is 32.0
+  final double? paddingRight;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 32.0, right: 32.0),
+      padding: EdgeInsets.only(left: paddingLeft!, right: paddingRight!),
       child: SizedBox(
         height: 300,
         child: Stack(
@@ -102,7 +114,8 @@ class CustomCookieCardWidget extends StatelessWidget {
               top: -20,
               child: Align(
                 alignment: Alignment.topCenter,
-                child: Image.asset(imageName!,
+                child: Image.asset(
+                  imageName!,
                   fit: BoxFit.cover,
                   height: 150,
                   width: 150,

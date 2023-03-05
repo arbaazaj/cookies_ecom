@@ -1,6 +1,7 @@
 import 'package:cookies_ecom/screens/card_header_widget.dart';
 import 'package:cookies_ecom/themes/colors.dart';
 import 'package:cookies_ecom/widgets/custom_app_bar_widget.dart';
+import 'package:cookies_ecom/widgets/custom_bottom_nav_bar.dart';
 import 'package:cookies_ecom/widgets/custom_cookie_card_widget.dart';
 import 'package:cookies_ecom/widgets/custom_offer_widget.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
       top: false,
       child: Scaffold(
         backgroundColor: backgroundColor,
+        bottomNavigationBar: const CustomBottomNavBar(),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,6 +45,7 @@ class _HomePageState extends State<HomePage> {
                     price: 20,
                   ),
                   CustomCookieCardWidget(
+                    paddingLeft: 0.0,
                     imageName: 'assets/oatmeal_cookie.png',
                     cookieName: 'Oatmeal with raisins',
                     isPremium: false,
