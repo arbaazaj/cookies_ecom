@@ -3,7 +3,7 @@ import 'package:cookies_ecom/widgets/profile_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key, this.appBarHeight = 70}) : super(key: key);
+  const CustomAppBar({Key? key, this.appBarHeight = 65}) : super(key: key);
 
   /// Default [appBarHeight] height is 70.
   final double appBarHeight;

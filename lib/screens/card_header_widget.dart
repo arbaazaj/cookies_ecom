@@ -19,13 +19,13 @@ class CardHeaderWidget extends StatelessWidget {
               'Cookies',
               style: Theme.of(context)
                   .textTheme
-                  .displayMedium!
+                  .displaySmall!
                   .copyWith(color: white),
             ),
             Text(
               'Premium',
               style:
-              Theme.of(context).textTheme.headlineMedium!.copyWith(
+              Theme.of(context).textTheme.headlineSmall!.copyWith(
                 color: darkOrange,
                 fontWeight: FontWeight.w400,
                 height: 0.8,
