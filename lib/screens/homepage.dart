@@ -17,42 +17,45 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor,
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const CustomAppBar(),
-          const Padding(
-            padding: EdgeInsets.only(left: 32.0, right: 32.0),
-            child: CardHeaderWidget(),
-          ),
-          const SizedBox(height: 25.0),
-          SingleChildScrollView(
-            clipBehavior: Clip.none,
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: const [
-                CustomCookieCardWidget(
-                  imageName: 'assets/chocolate_chip_cookie.png',
-                  cookieName: 'Chocolate chips',
-                  isPremium: true,
-                  price: 20,
-                ),
-                CustomCookieCardWidget(
-                  imageName: 'assets/oatmeal_cookie.png',
-                  cookieName: 'Oatmeal with raisins',
-                  isPremium: false,
-                  price: 16,
-                ),
-              ],
+    return SafeArea(
+      top: false,
+      child: Scaffold(
+        backgroundColor: backgroundColor,
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const CustomAppBar(),
+            const Padding(
+              padding: EdgeInsets.only(left: 32.0, right: 32.0),
+              child: CardHeaderWidget(),
             ),
-          ),
-          const SizedBox(height: 15.0),
-          // Offer card
-          const CustomOfferWidget(),
-        ],
+            const SizedBox(height: 25.0),
+            SingleChildScrollView(
+              clipBehavior: Clip.none,
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: const [
+                  CustomCookieCardWidget(
+                    imageName: 'assets/chocolate_chip_cookie.png',
+                    cookieName: 'Chocolate chips',
+                    isPremium: true,
+                    price: 20,
+                  ),
+                  CustomCookieCardWidget(
+                    imageName: 'assets/oatmeal_cookie.png',
+                    cookieName: 'Oatmeal with raisins',
+                    isPremium: false,
+                    price: 16,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 15.0),
+            // Offer card
+            const CustomOfferWidget(),
+          ],
+        ),
       ),
     );
   }

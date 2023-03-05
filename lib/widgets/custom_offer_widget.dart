@@ -45,72 +45,95 @@ class CustomOfferWidget extends StatelessWidget {
                 bottomRight: Radius.circular(76.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/double_chocolate.png',
-                    fit: BoxFit.cover,
-                    height: 80,
-                    width: 80,
-                  ),
-                  Flexible(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Double chocolate',
-                            softWrap: true,
-                            style: TextStyle(
-                              fontSize: 24.0,
-                            ),
-                          ),
-                          Row(
+            child: Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/double_chocolate.png',
+                        fit: BoxFit.cover,
+                        height: 80,
+                        width: 80,
+                      ),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Image.asset(
-                                'assets/crown.png',
-                                height: 24.0,
-                                width: 24.0,
-                                color: darkOrange,
-                              ),
-                              const SizedBox(width: 10.0),
-                              Text(
-                                'Premium'.toUpperCase(),
-                                style: const TextStyle(
-                                  color: darkOrange,
-                                  fontSize: 18,
+                              const Text(
+                                'Double chocolate',
+                                softWrap: true,
+                                style: TextStyle(
+                                  fontSize: 24.0,
                                 ),
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/crown.png',
+                                    height: 24.0,
+                                    width: 24.0,
+                                    color: darkOrange,
+                                  ),
+                                  const SizedBox(width: 10.0),
+                                  Text(
+                                    'Premium'.toUpperCase(),
+                                    style: const TextStyle(
+                                      color: darkOrange,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text(
+                            '20 USD',
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                decoration: TextDecoration.lineThrough),
+                          ),
+                          Text(
+                            '12 USD',
+                            style: TextStyle(
+                              color: darkOrange,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )
                         ],
+                      ),
+                    ],
+                  ),
+                ),
+                Positioned(
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        height: 50.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
+                            color: black,
+                            borderRadius: BorderRadius.circular(160.0)),
+                        child: const Icon(Icons.arrow_forward),
                       ),
                     ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        '20 USD',
-                        style: TextStyle(
-                            fontSize: 18.0,
-                            decoration: TextDecoration.lineThrough),
-                      ),
-                      Text(
-                        '12 USD',
-                        style: TextStyle(
-                            fontSize: 18.0, fontWeight: FontWeight.w600),
-                      )
-                    ],
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
